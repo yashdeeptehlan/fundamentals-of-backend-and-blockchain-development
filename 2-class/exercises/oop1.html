@@ -26,14 +26,26 @@
 
   </body>
   <script>
-  class Shape {
+    class Shape {
+      constructor(name, sides, sidelength){
+        this.name = name;
+        this.sides = sides;
+        this.sidelength = sideLength;
+      }
 
-    name;
-    sides;
-    sideLength;
+      calcPerimeter(){
+        const perimeter = this.sides * this.sideLength;
+        console.log(`Perimeter of ${this.name} is ${perimeter}`);
+      }
+    }
+    //Create a square instance
+    const square = new Shape("square", 4, 5);
 
-  }
+    //Create a tri instance
+    const triangle = new Shape("triangle", 3, 3);
+
+    //Calculate and log the perimeter of the triangle
+    triangle.calcPerimeter();
 
   </script>
-
 </html>
