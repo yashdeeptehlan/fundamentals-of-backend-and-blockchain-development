@@ -30,7 +30,17 @@
     const para = document.createElement('p');
 
     // Add your code here
+    function random(min, max){
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
+    function chooseName(nameArray){
+      const randomIndex = random(0, nameArray.length - 1);
+      const randomName = nameArray[randomIndex];
+      para.textContent = `Random Name : ${randomName}`;
+    }
+
+    chooseName(names);
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
