@@ -42,7 +42,11 @@
     const color = 'blue';
 
     // Add your code here
-
+    function drawRectangle(x, y, width, height, color){
+      ctx.fillStyle = color; //set the fill color 
+      ctx.fillRect(x, y, width, height) //draw the color filled rectangle
+    }
+    drawRectangle(x, y, width, height, color)
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
